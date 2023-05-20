@@ -19,6 +19,7 @@ main.obj: C:/ti/ccs1200/ccs/ccs_base/arm/include/CMSIS/core_cm4.h
 main.obj: C:/ti/ccs1200/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 main.obj: C:/ti/ccs1200/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 main.obj: C:/ti/ccs1200/ccs/ccs_base/arm/include/system_msp432p401r.h
+main.obj: C:/ti/ccs1200/ccs/ccs_base/arm/include/msp432.h
 main.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdio.h
 main.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdarg.h
 
@@ -59,6 +60,8 @@ C:/ti/ccs1200/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h:
 C:/ti/ccs1200/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h:
 
 C:/ti/ccs1200/ccs/ccs_base/arm/include/system_msp432p401r.h:
+
+C:/ti/ccs1200/ccs/ccs_base/arm/include/msp432.h:
 
 C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdio.h:
 
