@@ -16,6 +16,7 @@ ORDERED_OBJS += \
 "./Examples/blinky.obj" \
 "./Examples/digitalIO.obj" \
 "./Examples/interrupts.obj" \
+"./Examples/timers.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -161,8 +162,8 @@ Blinky.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "Examples\blinky.obj" "Examples\digitalIO.obj" "Examples\interrupts.obj" 
-	-$(RM) "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "Examples\blinky.d" "Examples\digitalIO.d" "Examples\interrupts.d" 
+	-$(RM) "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "Examples\blinky.obj" "Examples\digitalIO.obj" "Examples\interrupts.obj" "Examples\timers.obj" 
+	-$(RM) "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "Examples\blinky.d" "Examples\digitalIO.d" "Examples\interrupts.d" "Examples\timers.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
