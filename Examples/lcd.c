@@ -15,7 +15,6 @@
  *      VDD & Anode (A) to 5V
  *      VSS & Cathode (K) to GND
  *      V0 to the output of a 10k Potentiometer
- *
  */
 
 #include "msp432.h"
@@ -97,7 +96,6 @@ void lcd_print(char *string) {
 
 /*
  * Setup output pins and configures LCD behaviors.
- *
  */
 void LCD_init(void) {
     P4->DIR = 0xFF;             /* make P4 pins output for data and controls */
@@ -144,7 +142,6 @@ void LCD_nibble_write(unsigned char data, unsigned char control) {
  *      - 0x06: Sets the entry mode to increment cursor position after each character
  *      - 0x01: Clears the display and moves cursor to home position
  *      - 0x0F: Turns on display and activates cursor
- *
  */
 void LCD_command(unsigned char command) {
     LCD_nibble_write(command & 0xF0, 0);    /* upper nibble first */
@@ -158,7 +155,6 @@ void LCD_command(unsigned char command) {
 
 /*
  * Writes data to LCD
- *
  */
 void LCD_data(unsigned char data) {
     LCD_nibble_write(data & 0xF0, RS);    /* upper nibble first */
@@ -169,7 +165,6 @@ void LCD_data(unsigned char data) {
 
 /*
  * Delay milliseconds when system clock is at 3 MHz
- *
  */
 void delayMs(int n) {
     int i, j;
