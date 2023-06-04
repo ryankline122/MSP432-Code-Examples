@@ -4,6 +4,7 @@
 "./Examples/blinky.obj"
 "./Examples/digitalIO.obj"
 "./Examples/interrupts.obj"
+"./Examples/lcd.obj"
 "./Examples/timers.obj"
 "../msp432p401r.cmd"
 -llibc.a

@@ -3,3 +3,4 @@
 .launches/
 .Debug/*
 *.d
+/Debug/
