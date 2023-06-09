@@ -39,7 +39,7 @@ void LCD_data(unsigned char data);
 void LCD_init(void);
 void lcd_print(char *string);
 
-int lcd(void) {
+void lcd(void) {
     LCD_init();
 
     // Setup Ports

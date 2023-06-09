@@ -8,6 +8,7 @@ C_SRCS += \
 ../Examples/digitalIO.c \
 ../Examples/interrupts.c \
 ../Examples/lcd.c \
+../Examples/temp.c \
 ../Examples/timers.c 
 
 C_DEPS += \
@@ -15,6 +16,7 @@ C_DEPS += \
 ./Examples/digitalIO.d \
 ./Examples/interrupts.d \
 ./Examples/lcd.d \
+./Examples/temp.d \
 ./Examples/timers.d 
 
 OBJS += \
@@ -22,6 +24,7 @@ OBJS += \
 ./Examples/digitalIO.obj \
 ./Examples/interrupts.obj \
 ./Examples/lcd.obj \
+./Examples/temp.obj \
 ./Examples/timers.obj 
 
 OBJS__QUOTED += \
@@ -29,6 +32,7 @@ OBJS__QUOTED += \
 "Examples/digitalIO.obj" \
 "Examples/interrupts.obj" \
 "Examples/lcd.obj" \
+"Examples/temp.obj" \
 "Examples/timers.obj" 
 
 C_DEPS__QUOTED += \
@@ -36,6 +40,7 @@ C_DEPS__QUOTED += \
 "Examples/digitalIO.d" \
 "Examples/interrupts.d" \
 "Examples/lcd.d" \
+"Examples/temp.d" \
 "Examples/timers.d" 
 
 C_SRCS__QUOTED += \
@@ -43,6 +48,7 @@ C_SRCS__QUOTED += \
 "../Examples/digitalIO.c" \
 "../Examples/interrupts.c" \
 "../Examples/lcd.c" \
+"../Examples/temp.c" \
 "../Examples/timers.c" 
 
 

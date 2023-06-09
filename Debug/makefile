@@ -15,6 +15,7 @@ ORDERED_OBJS += \
 "./Examples/digitalIO.obj" \
 "./Examples/interrupts.obj" \
 "./Examples/lcd.obj" \
+"./Examples/temp.obj" \
 "./Examples/timers.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -127,29 +128,29 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Blinky.out \
+Examples.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Blinky.out" \
+"Examples.out" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "Blinky.out"
+	@$(MAKE) --no-print-directory -Onone "Examples.out"
 
 # Tool invocations
-Blinky.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+Examples.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/home/ryan/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Blinky.map" --heap_size=1024 --stack_size=512 -i"/home/ryan/ti/ccs1230/ccs/ccs_base/arm/include" -i"/home/ryan/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/ryan/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Blinky_linkInfo.xml" --rom_model -o "Blinky.out" $(ORDERED_OBJS)
+	"/home/ryan/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Examples.map" --heap_size=1024 --stack_size=512 -i"/home/ryan/ti/ccs1230/ccs/ccs_base/arm/include" -i"/home/ryan/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/ryan/ti/ccs1230/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Examples_linkInfo.xml" --rom_model -o "Examples.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "Examples/blinky.obj" "Examples/digitalIO.obj" "Examples/interrupts.obj" "Examples/lcd.obj" "Examples/timers.obj" 
-	-$(RM) "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "Examples/blinky.d" "Examples/digitalIO.d" "Examples/interrupts.d" "Examples/lcd.d" "Examples/timers.d" 
+	-$(RM) "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "Examples/blinky.obj" "Examples/digitalIO.obj" "Examples/interrupts.obj" "Examples/lcd.obj" "Examples/temp.obj" "Examples/timers.obj" 
+	-$(RM) "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "Examples/blinky.d" "Examples/digitalIO.d" "Examples/interrupts.d" "Examples/lcd.d" "Examples/temp.d" "Examples/timers.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
